@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h2>Agregar Empleado</h2>
+  <form method="POST" action="">
+    {{ form.hidden_tag() }}
+    <p>
+      {{ form.username.label }}<br>
+      {{ form.username(size=32) }}
+    </p>
+    <p>
+      {{ form.job_title.label }}<br>
+      {{ form.job_title(size=32) }}
+    </p>
+    <p>
+      {{ form.work_email.label }}<br>
+      {{ form.work_email(size=32) }}
+    </p>
+    <p>
+      {{ form.country.label }}<br>
+      {{ form.country() }}
+    </p>
+    <p>
+      {{ form.password.label }}<br>
+      {{ form.password(size=32) }}
+    </p>
+    <p>
+      {{ form.confirm.label }}<br>
+      {{ form.confirm(size=32) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+  </form>
+{% endblock %}

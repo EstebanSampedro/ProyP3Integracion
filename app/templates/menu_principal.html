@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="menu">
+    <h1>Menu Principal</h1>
+    <div class="menu-item">
+        <a href="{{ url_for('main.crear_usuario') }}" class="menu-link">Añadir Empleado</a>
+    </div>
+    <div class="menu-item">
+        <a href="{{ url_for('main.eliminar_usuario') }}" class="menu-link">Eliminar Empleado</a>
+    </div>
+</div>
+{% endblock %}
