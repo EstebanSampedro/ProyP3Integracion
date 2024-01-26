@@ -1,32 +1,32 @@
 {% extends "layout.html" %}
 {% block content %}
-  <h2>Agregar Empleado</h2>
-  <form method="POST" action="">
+<div class="form-container">
+  <h2 class="form-title">Agregar Empleado</h2>
+  <form method="POST" action="" class="form">
     {{ form.hidden_tag() }}
-    <p>
-      {{ form.username.label }}<br>
-      {{ form.username(size=32) }}
-    </p>
-    <p>
-      {{ form.job_title.label }}<br>
-      {{ form.job_title(size=32) }}
-    </p>
-    <p>
-      {{ form.work_email.label }}<br>
-      {{ form.work_email(size=32) }}
-    </p>
-    <p>
-      {{ form.country.label }}<br>
-      {{ form.country() }}
-    </p>
-    <p>
-      {{ form.password.label }}<br>
-      {{ form.password(size=32) }}
-    </p>
-    <p>
-      {{ form.confirm.label }}<br>
-      {{ form.confirm(size=32) }}
-    </p>
-    <p>{{ form.submit() }}</p>
+    <div class="form-group">
+      {{ form.username.label(class="form-label") }}
+      {{ form.username(class="form-control", size=32) }}
+    </div>
+    <div class="form-group">
+      {{ form.job_title.label(class="form-label") }}
+      {{ form.job_title(class="form-control", size=32) }}
+    </div>
+    <div class="form-group">
+      {{ form.work_email.label(class="form-label") }}
+      {{ form.work_email(class="form-control", size=32) }}
+    </div>
+    <div class="form-group">
+      {{ form.password.label(class="form-label") }}
+      {{ form.password(class="form-control", size=32) }}
+    </div>
+    <div class="form-group">
+      {{ form.confirm.label(class="form-label") }}
+      {{ form.confirm(class="form-control", size=32) }}
+    </div>
+    <div class="form-group">
+      {{ form.submit(class="form-submit") }}
+    </div>
   </form>
+</div>
 {% endblock %}

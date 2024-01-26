@@ -1,12 +1,20 @@
 {% extends "layout.html" %}
 {% block content %}
-<div class="menu">
-    <h1>Menu Principal</h1>
-    <div class="menu-item">
-        <a href="{{ url_for('main.crear_usuario') }}" class="menu-link">Añadir Empleado</a>
-    </div>
-    <div class="menu-item">
-        <a href="{{ url_for('main.eliminar_usuario') }}" class="menu-link">Eliminar Empleado</a>
+<div class="menu-container">
+    <h1 class="menu-title">Proyecto Integrador ESCN Menú Principal</h1>
+    <div class="menu-items">
+        <a href="{{ url_for('main.crear_usuario') }}" class="menu-link">
+            <div class="menu-item">
+                <span class="menu-icon">➕</span>
+                <span>Añadir Empleado</span>
+            </div>
+        </a>
+        <a href="{{ url_for('main.eliminar_usuario') }}" class="menu-link">
+            <div class="menu-item">
+                <span class="menu-icon">➖</span>
+                <span>Eliminar Empleado</span>
+            </div>
+        </a>
     </div>
 </div>
 {% endblock %}
